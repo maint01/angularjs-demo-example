@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>update</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="#" th:action="@{/form/updateProcess}"
+		th:object="${student}">
+		<table>
+			<tr>
+				<td><label>ID: </label></td>
+				<td><input type="text" readonly="true" th:field="*{id}" /></td>
+			</tr>
+			<tr>
+				<td><label>Name: </label></td>
+				<td><input name="name" id="name" type="text" th:field="*{name}" /></td>
+			</tr>
+			<tr>
+				<td><label>Address: </label></td>
+				<td><input name="address" id="address" type="text"
+					th:field="*{address}" /></td>
+			</tr>
+			<tr>
+				<td><label>Class: </label></td>
+				<td><select th:field="*{classes}">
+						<option th:each="item: ${listClass}" th:value="${item.id}"
+							th:text="${item.name}"></option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Update" /></td>
+				<!-- 				<td><a href="http://localhost:8080/form/student">Cancel</a></td> -->
+				<td><a th:href="@{/form/student}">Cancel</a></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

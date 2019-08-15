@@ -1,0 +1,20 @@
+<div>
+	<table>
+		<tr>
+			<td>Name</td>
+			<td><input ng-model="vm.student.name"/></td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><input ng-model="vm.student.address"/></td>
+		</tr>
+		<tr>
+			<td>Class</td>
+			<td><select ng-model="vm.student.classes.id" ng-options="i.id as i.name for i in vm.classList"></td>
+		</tr>
+		<tr>
+			<td><button ng-click="vm.cancel()">Cancel</button></td>
+			<td><button ng-click="vm.save()">Save</button></td>
+		</tr>
+	</table>
+</div>

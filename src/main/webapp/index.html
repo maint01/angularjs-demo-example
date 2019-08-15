@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Shop app</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body ng-app="shopApp" ng-strict-di>
+
+	<a ui-sref='student'>GO TO STUDENT</a>&nbsp;||
+	<a ui-sref='student-add'>ADD</a>
+	<div ui-view="content" ng-cloak></div>
+	<div ui-view></div>
+	
+	
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+	<script src="bower_components/ngstorage/ngStorage.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+	
+	<script src="app/app.module.js"></script>
+	<script src="app/entities/student/student.state.js"></script>
+	<script src="app/app.state.js"></script>
+	<script src="app/entities/student/student.service.js"></script>
+	<script src="app/entities/student/student.controller.js"></script>
+	<script src="app/entities/student/student-form.controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Welcome html default</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body ng-app="shopApp" ng-strict-di>
+	<a ui-sref='student'>GO TO STUDENT</a>&nbsp;||
+	<a ui-sref='student-add'>ADD</a>
+	<div ui-view="content"></div>
+
+	<script type="text/javascript" src="script_lib/jquery.min.js"></script>
+	<script type="text/javascript" src="script_lib/angular.min.js"></script>
+	<script type="text/javascript" src="script_lib/ngStorage.js"></script>
+	<script type="text/javascript" src="script_lib/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="script_lib/angular-resource.js"></script>
+	<script type="text/javascript" src="script_lib/FileSaver.js"></script>
+	<script type="text/javascript" src="app.module.js"></script>
+	<script type="text/javascript" src="entity.state.js"></script>
+	<!-- student entity  -->
+	<script type="text/javascript" src="entities/student/student.state.js"></script>
+	<script type="text/javascript" src="entities/student/student.service.js"></script>
+	<script type="text/javascript" src="entities/student/student.controller.js"></script>
+	<script type="text/javascript" src="entities/student/student-form.controller.js"></script>
+	<!-- end student entity  -->
+</body>
+</html>
